@@ -49,7 +49,13 @@
 					break;
 
 				case Ladder:
+					// position += droll;
 					position += droll;
+					if ((position + droll) > Win_position){
+						position = Win_position;
+					} else{
+						position += droll;	
+					}
 					System.out.println("Player moves ahead by : "+position);
 					break;
 
